@@ -18,7 +18,7 @@ gulp.task('default', ['clean'], function() {
 });
 
 gulp.task('clean', function () {
-    del(['scss', 'js', 'images']);
+    del(['scss', 'js/*', 'images']);
 });
 
 gulp.task('scss', function () {
@@ -50,7 +50,6 @@ gulp.task('scripts', function() {
     return gulp.src(['web-src/js/*.js'])
         .pipe(sourcemaps.init())
         .pipe(babel())
-        .on('error', browserifyHandler)
         .on('error', browserifyHandler)
         .pipe(concat('main.js'))
         .pipe(uglify())
@@ -98,8 +97,6 @@ gulp.task('css', function () {
 gulp.task('js', function () {
     return gulp.src([
         'bower_components/angular/angular.min.js',
-        'bower_components/angular-contenteditable/angular-contenteditable.js',
-        'bower_components/ngDraggable/ngDraggable.js',
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/bootstrap/dist/js/bootstrap.min.js'
     ])
