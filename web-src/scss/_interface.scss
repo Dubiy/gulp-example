@@ -1,0 +1,18 @@
+*[ng-cloak] .render {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: $font, arial;
+  .content-wrapper, .submenu .primary, .wrap-mainmenu .mainmenu {
+    margin: 0 auto;
+    width: 1240px;
+    max-width: 100%;
+    //border: 1px solid green;
+  }
+}
