@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "npm update",
-    "postinstall": "bower update"
+    "prestart": "npm update"
   },
   "keywords": [
     "gulp",
@@ -33,5 +32,9 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.4.1",
     "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
   }
 }

@@ -25,3 +25,74 @@ body {
   line-height: 75px;
   position: relative;
 }
+
+ul.products, ul.cart {
+  border: 2px solid gray;
+  width: 60%;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .product {
+    width: 50%;
+    //float: left;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+
+    & > div {
+      border: 1px solid #aaa;
+      height: 240px;
+
+      img, span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        max-height: 80%;
+        max-width: 100%;
+      }
+
+
+    }
+  }
+}
+
+ul.cart {
+  background: url("/images/cart.png") no-repeat center top;
+  background-size: 100px;
+  float: right;
+  min-width: 100px;
+  padding-top: 100px;
+  border: 2px solid gray;
+  width: 30%;
+  list-style: none;
+  margin: 0;
+  display: block;
+
+  &.hovered {
+    background-color: #c0a16b;
+  }
+
+  .product {
+    float: left;
+  }
+
+}
+
+
+//ul {
+//  li.item {
+//    background-color: red;
+//
+//    &:not(.ok) {
+//      background-color: green;
+//    }
+//
+//
+//  }
+//}
